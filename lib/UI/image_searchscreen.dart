@@ -16,6 +16,8 @@ class _ImageSearchScreenState extends State<ImageSearchScreen> {
     var p = Provider.of<ImageListViewModel>(context);
     return Scaffold(
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.black),
+          backgroundColor: Colors.white,
           title: Container(
             child: TextField(
               autofocus: true,

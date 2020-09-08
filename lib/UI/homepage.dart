@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
       context,
       listen: false,
     ).populateImageList();
-    SchedulerBinding.instance.window;
     super.initState();
   }
 
@@ -30,16 +29,15 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var p = Provider.of<ImageListViewModel>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Photo Collection'),
+        title: Text('Photo Wallpaper'),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: IconButton(
                 icon: showGridView ? Icon(Icons.list) : Icon(Icons.grid_on),
-                onPressed: onToggle),
+                onPressed: () => onToggle()),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
